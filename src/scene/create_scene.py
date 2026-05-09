@@ -1,7 +1,6 @@
-def create_scene(config):
+def create_scene(config, elements):
     headers = (
         "P3"
-        f"\n{config["resolution"][0]} {config["resolution"][1]}"
+        "\n"
+        f"{config["resolution"][0]} {config["resolution"][1]}"
     )
-
-    print(headers)
