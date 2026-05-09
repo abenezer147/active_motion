@@ -7,7 +7,7 @@ def create_rectangle(properties):
     rectangle_appearance = (pixel * properties["size"][0] + "\n") * properties["size"][1]
 
     rectangle = {
-        "rectangle_appearance": rectangle_appearance,
+        "appearance": rectangle_appearance,
         "position": properties["position"]
     }
 

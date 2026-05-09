@@ -1,4 +1,4 @@
-from scene import create_background
+from scene import create_background, add_body
 
 def create_scene(config, elements):
     headers = (
@@ -8,3 +8,11 @@ def create_scene(config, elements):
     )
 
     background = create_background(config["background_color"], config["resolution"])
+    body = add_body(elements, background)
+
+    frame = (
+        f"{headers}\n"
+        f"{body}"
+    )
+
+    print(frame)
