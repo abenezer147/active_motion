@@ -9,4 +9,3 @@ This version of the library is very limited in its functionality as it only allo
 This version also doesn't work well on larger resolutions due to an unknown bug.
 
 But it is a very good start and development is proceeding well.
-
