@@ -8,7 +8,6 @@ def create_scene(config, elements):
         f"{config["resolution"][0]} {config["resolution"][1]}"
         "\n"
         "255"
-        "\n"
     )
 
     background = create_background(config["background_color"], config["resolution"])

@@ -3,9 +3,9 @@ from config import scene_config
 from elements import create_rectangle
 
 rectangle_properties = {
-    "size": [150, 150],
-    "position": [0, 0],
-    "fill": [255, 0, 0]
+    "size": [300, 300],
+    "position": [100, 100],
+    "fill": [255, 100, 0]
 }
 
 rectangle = create_rectangle(rectangle_properties)

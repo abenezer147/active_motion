@@ -11,10 +11,10 @@ def add_body(elements, background):
 
         i = 0
         for row in appearance_rows:
-            new_string = replace_string(background_rows[position[1]], row, position[0])
+            new_string = replace_string(background_rows[position[1] + i], row, position[0])
             background_rows[position[1] + i] = new_string
 
             i += 1
 
-    body = "".join(background_rows)
+    body = "\n".join(background_rows)
     return body
