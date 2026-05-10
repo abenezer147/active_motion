@@ -1,5 +1,5 @@
-from scene import create_background, add_body, generate_frame
-
+from elements import create_background
+from scene import add_body, generate_frame
 
 def create_scene(config, elements):
     headers = (

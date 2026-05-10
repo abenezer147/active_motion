@@ -1,4 +1,4 @@
-from utils import replace_string, stringify_element
+from utils import stringify_element
 
 def add_body(elements, background):
     for element in elements:
@@ -9,13 +9,13 @@ def add_body(elements, background):
         for i, row in enumerate(element_content):
             actual_y_position = i + element_y
 
-            if actual_y_position >= len(background):
+            if actual_y_position < 0 or actual_y_position >= len(background):
                 continue
 
             for j, pixel in enumerate(row):
                 actual_x_position = j + element_x
 
-                if actual_x_position >= len(background[i + element_y]):
+                if actual_x_position < 0 or actual_x_position >= len(background[i + element_y]):
                     continue
 
                 background[i + element_y][j + element_x] = pixel
