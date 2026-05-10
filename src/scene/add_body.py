@@ -1,17 +1,26 @@
-from utils import replace_string
+from utils import replace_string, stringify_element
 
 def add_body(elements, background):
-    background_rows = background.split("\n")
-
     for element in elements:
-        appearance = element["appearance"]
-        appearance_rows = appearance.split("\n")
+        element_x = element["properties"]["position"][0]
+        element_y = element["properties"]["position"][1]
+        element_content = element["content"]
 
-        position = element["position"]
+        for i, row in enumerate(element_content):
+            actual_y_position = i + element_y
 
-        for i, row in enumerate(appearance_rows):
-            new_string = replace_string(background_rows[position[1] + i], row, position[0])
-            background_rows[position[1] + i] = new_string
+            if actual_y_position >= len(background):
+                continue
 
-    body = "\n".join(background_rows)
+            for j, pixel in enumerate(row):
+                actual_x_position = j + element_x
+
+                if actual_x_position >= len(background[i + element_y]):
+                    continue
+
+                background[i + element_y][j + element_x] = pixel
+
+    stringified_background = stringify_element(background)
+    body = stringified_background
+
     return body
