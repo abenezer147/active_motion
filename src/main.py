@@ -11,6 +11,10 @@ rectangle_properties = {
 
 rectangle = create_rectangle(rectangle_properties)
 
-elements = [rectangle]
+rectangle.to([{
+    "name": "position",
+    "content": [2, 2]
+}])
 
+elements = [rectangle]
 create_scene(scene_config, elements)
