@@ -2,9 +2,9 @@ from utils import stringify_element
 
 def add_body(elements, background):
     for element in elements:
-        element_x = element.properties["position"][0]
-        element_y = element.properties["position"][1]
-        element_content = element.content
+        element_x = element.frames[0]["properties"]["position"][0]
+        element_y = element.frames[0]["properties"]["position"][1]
+        element_content = element.frames[0]["content"]
 
         for i, row in enumerate(element_content):
             actual_y_position = i + element_y

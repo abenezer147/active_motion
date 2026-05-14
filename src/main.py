@@ -5,7 +5,7 @@ from elements import create_rectangle
 rectangle_properties = {
     "name": "rectangle_one",
     "size": [5, 5],
-    "position": [0, 0],
+    "position": [2, 2],
     "fill": [255, 255, 255]
 }
 
