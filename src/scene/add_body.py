@@ -1,6 +1,8 @@
-from utils import stringify_element
+from utils import stringify_element, group_elements
 
 def add_body(elements, background):
+    frames = group_elements(elements)
+
     for element in elements:
         element_x = element.frames[0]["properties"]["position"][0]
         element_y = element.frames[0]["properties"]["position"][1]
